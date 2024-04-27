@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\logo.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="C:\Users\Ken James\Documents\My Web Projects\Web 2\CSS\Styles.css"> <!-- CSS FOR ALL DESIGN -->
+    <title>Cupineken </title>
+</head>
+
+<body>
+  
+<!-- Log Area -->
+    <div id="login-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Login Area</h2>
+            <form id="loginForm">
+               Username:
+                <input type="text" id="username" name="username" required>
+               Password:
+                <input type="password" id="password" name="password" required>
+
+                <a href="#" class="forgot-password" onclick="forgotPassword()">Forgot password?</a>
+                <button  id="loginButton" onclick="loginButton()">Log in</button>
+                <button  id="resetButton" onclick="resetButton()">Reset</button>
+            </form>
+
+            <div id="loginMessage"></div>
+        </div>
+    </div>
+    
+<!-- Logo -->
+    <header id = "header">
+        <div class="logo">
+            <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\logo.png" alt="Cupineken Coffee Shop Logo">
+        </div>
+        <h1>Cupineken</h1>
+    </header>
+
+<!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" onclick="logout()"> Log out </a></li>
+        </ul>
+    </nav>
+
+
+
+    <!-- Home -->
+<main>
+  <!-- INTRODUCTION -->
+  <section id="intro" class="intro">
+    <div class="intro-content">
+    <section class="intro">
+        <div class="intro-content">
+            <h2>Welcome to our Coffee Shop!</h2>
+            <p>Indulge in the rich flavors and aromatic blends of our carefully selected coffees. From espresso to lattes, our menu offers a delightful experience for every coffee enthusiast. Relax in our cozy ambiance and savor the perfect cup tailored to your taste.</p>
+            <p>But Cupineken is more than just a coffee shop; it's a community hub where friends gather, ideas flow, and memories are made. Whether you're catching up with an old friend, brainstorming your next big project, or simply seeking a moment of tranquility, our café provides the perfect backdrop for your endeavors.</p>
+            <p>So come on in, take a seat, and let us craft the perfect cup of coffee to accompany you on your journey. Welcome to Cupineken, where every sip is a celebration of life, love, and the pursuit of great coffee.</p>
+        </div>
+
+<!-- SIDEBAR -->
+    <aside class="sidebar">
+        <figure>
+            <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\muffin.jpg" alt="Free Muffin">
+            <figcaption>Get a free muffin with every coffee purchased today!</figcaption>
+        </figure>
+        <a href="#menu" class="menu-button">Order Now</a>
+    </aside>
+</section>
+
+</main>
+  <!-- MENU: VIRTUAL CASHIER -->  
+    <main>    
+        <section id="menu" class="menu">
+                            <h2>Menu</h2>
+                            <div class="menu">
+                                <div class="item-container">
+                                    <!-- ITEMS: PRODUCT -->
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\espresso.jpg" alt="Espresso">
+                                        </div>
+                                        <div class="item-details">
+                                            <div class="item-name">Espresso</div>
+                                            <div class="item-price">Price: Php 49.00</div>
+                                            <button class="btn" onclick="addItem('Espresso', 49.00)">Add</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\latte.jpg" alt=" Choco Latte">
+                                        </div>
+                                        <div class="item-details">
+                                            <div class="item-name">Choco Latte</div>
+                                            <div class="item-price">Price: Php 49.00</div>
+                                            <button class="btn" onclick="addItem('Choco Latte', 49.00)">Add</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\cappuccino.jpg" alt="Cappuccino">
+                                        </div>
+                                        <div class="item-details">
+                                            <div class="item-name">Cappuccino </div>
+                                            <div class="item-price">Price: Php 49.00</div>
+                                            <button class="btn" onclick="addItem('Cappucino',49.00)">Add</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\mocha.jpg" alt="Coco Mocha">
+                                        </div>
+                                        <div class="item-details">
+                                            <div class="item-name">Coco Mocha</div>
+                                            <div class="item-price">Price: Php 59.00</div>
+                                            <button class="btn" onclick="addItem('Coco Mocha', 59.00)">Add</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\americano.jpg" alt="Americano">
+                                        </div>
+                                        <div class="item-details">
+                                            <div class="item-name">Americano</div>
+                                            <div class="item-price">Price: Php 29.00</div>
+                                            <button class="btn" onclick="addItem('Americano', 29.00)">Add</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\icetea.jpg" alt="Iced Latte">
+                                        </div>
+                                        <div class="item-details">
+                                            <div class="item-name">Iced Latte</div>
+                                            <div class="item-price">Price: Php 29.00</div>
+                                            <button class="btn" onclick="addItem('Iced Latte', 29.00)">Add</button>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+
+                                <!-- CASHIER -->
+                            <div id="notification">
+                                <button class="close-button" onclick="closeNotification()">Close</button>
+                                <div id="order-list-container">
+                                    <h2>Order List</h2>
+                                    <ul id="order-list"></ul>
+                                    <div>Total: <span id="total-amount">Php 0.00</span></div>
+                                    <p> </p>
+                                </div>
+                            <!-- PAYMENT PART -->                         
+                                <div class="payment-container">
+                                    <h2>Payment</h2>
+                                    Enter Payment Amount:
+                                    <input type="number" id="payment-amount">
+                                    <button class="payment-button" onclick="processPayment()">Pay</button>
+                                    <button class="cancel-button" onclick="cancelOrder()">Cancel Order</button>
+                                </div>
+                                
+                                <div id="receipt-container">
+                                    <h2>Receipt</h2>
+                                    <div id="receipt-total"></div>
+                                </div>
+                            </div>
+                            
+                           <button class="notification-button hide" onclick="showNotification()">Show Notification</button>                       
+        </section>
+
+
+<!-- ABOUT US -->
+        <section id="about" class="about">
+
+            <h2>About Us</h2>
+            <p>Welcome to Cupineken Coffee Shop! We're passionate about bringing you the finest coffee and pastries, made with the highest-quality ingredients. Our team is dedicated to providing a warm, inviting atmosphere where you can relax and enjoy a perfect cup of coffee.</p>
+            <p>Our coffee is sourced from the best farms around the world, ensuring that every cup is bursting with flavor. Whether you're a coffee aficionado or just starting your journey, we have something for everyone.</p>
+            <p>Our commitment to quality and customer satisfaction sets us apart. We look forward to serving you and making your coffee experience truly exceptional.</p>
+            <div class="images-container">
+                <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\coffee_farm.jpg" alt="Coffee Farm" class="about-image">
+                <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\coffee_roasting.jpg" alt="Coffee Roasting" class="about-image">
+                <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\coffee_beans.jpg" alt="Coffee Beans" class="about-image">
+                <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\coffee_brewing.jpg" alt="Coffee Brewing" class="about-image">
+            </div>
+        </section>
+
+
+  <!-- CONTACT -->      
+        <section id="contact" class="contact">
+           
+            <h2>Contact Us</h2>
+        <div class="contact-info">
+            <div class="info">
+                <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\location_icon.png" alt="Location Icon">
+                <p>123 Main Street, City, Country</p>
+            </div>
+            <div class="info">
+                <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\phone_icon.png" alt="Phone Icon">
+                <p>+123 456 789</p>
+            </div>
+            <div class="info">
+                <img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\email_icon.png" alt="Email Icon">
+                <p>info@cupineken.com</p>
+            </div>
+        </div>
+        <h3>Message Us</h3>
+        <p>If you have any questions or feedback, we would love to hear from you!</p>
+        <form id="contactForm">
+            Name:
+            <input type="text" id="name" name="name" required>
+            Message:
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+        </section>
+    </main>
+
+ <!-- FOOTER -->   
+    <footer>
+        <div class="social-media">
+            <a href="#"><img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="C:\Users\Ken James\Documents\My Web Projects\Web 2\Pictures\twitter.jpg" alt="Twitter"></a>
+        </div>
+        <p>&copy; 2024 Cupineken Coffee Shop. All Rights Reserved.</p>
+        <p>Developed by Ken James Fronda</p>
+    </footer>
+
+
+    <script src="C:\Users\Ken James\Documents\My Web Projects\Web 2\JS\JavaScript.js"></script><!-- SCRIPT FOR CASHIER -->
+    <script src="C:\Users\Ken James\Documents\My Web Projects\Web 2\JS\loginjs.js"></script><!-- SCRIPT FOR LOG IN AREA -->
+
+    
+</body>
+</html>
